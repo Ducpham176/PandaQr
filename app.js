@@ -77,7 +77,8 @@ const app = {
             const Debounce = DebounceInput.value
 
             setTimeout(() => {
-                const url = `https://qr.ecaptcha.vn/api/generate/mb/${ BankAccount }/VIETQR.CC?amount=${ Debounce }&memo=${ BankAccount } Chuyen Khoan&is_mask=0`
+                const url = `https://qr.ecaptcha.vn/api/generate/mb/${ BankAccount }/VIETQR.CC?amount=${ Debounce }&memo=DH0101&is_mask=0&bg=7`
+                console.log(url)
                 try {
                     qrContainer.innerHTML = this.render(url)
                 } 
