@@ -25,7 +25,10 @@
 }
 
 .root article div {
-    display: grid;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     gap: 5px;
     width: 100%;
 
