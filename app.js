@@ -73,12 +73,11 @@ const app = {
 
         BtnSubmit.onclick = () => {
             qrContainer.innerHTML = this.loading()
-            const BankAccount = BankAccountInput.value.trim()
-            const Debounce = DebounceInput.value.trim()
+            const BankAccount = BankAccountInput.value
+            const Debounce = DebounceInput.value
 
             setTimeout(() => {
-                const url = `https://vietqr.co/api/generate/mb/${ BankAccount }/VIETQR.CO?amount=${ Debounce }&accountName=${ BankAccount } Chuyen Khoan`
-
+                const url = `https://qr.ecaptcha.vn/api/generate/mb/${ BankAccount }/VIETQR.CC?amount=${ Debounce }&memo=${ BankAccount } Chuyen Khoan&is_mask=0`
                 try {
                     qrContainer.innerHTML = this.render(url)
                 } 
